@@ -1,0 +1,78 @@
+{
+  "name": "mem-redis",
+  "version": "0.0.1",
+  "description": "A Redis caching layer for mem",
+  "author": {
+    "name": "Claudiu Ceia",
+    "email": "claudiu.ceia@gmail.com",
+    "url": "https://github.com/ClaudiuCeia"
+  },
+  "repository": {
+    "url": "https://github.com/ClaudiuCeia/mem-redis",
+    "type": "git"
+  },
+  "bugs": "https://github.com/ClaudiuCeia/mem-redis/issues",
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "mem-redis",
+    "memoize",
+    "redis-cache"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production cd dist/ && node index.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon",
+    "start:debug": "cross-env NODE_ENV=development node -r ts-node/register --inspect ./src/index.ts",
+    "pretest": "yarn lint",
+    "test": "cross-env NODE_ENV=test jest --watch",
+    "test:ci": "cross-env NODE_ENV=test jest --ci",
+    "lint": "tslint --project .",
+    "lint:fix": "tslint --project . --fix",
+    "build": "tsc",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.1.3",
+    "@types/mem": "^1.1.2",
+    "@types/p-memoize": "^1.0.0",
+    "@types/redis": "^2.8.6",
+    "coveralls": "^3.0.2",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.3",
+    "jest": "^23.2.0",
+    "mem": "^3.0.1",
+    "p-memoize": "^2.0.0",
+    "ts-jest": "^23.0.0",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typescript": "^2.9.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "modulePathIgnorePatterns": [
+      "dist"
+    ]
+  }
+}
