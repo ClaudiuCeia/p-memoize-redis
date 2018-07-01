@@ -1,17 +1,17 @@
 {
-  "name": "mem-redis",
+  "name": "p-memoize-redis",
   "version": "0.0.1",
-  "description": "A Redis caching layer for mem",
+  "description": "A Redis caching layer for p-memoize",
   "author": {
     "name": "Claudiu Ceia",
     "email": "claudiu.ceia@gmail.com",
     "url": "https://github.com/ClaudiuCeia"
   },
   "repository": {
-    "url": "https://github.com/ClaudiuCeia/mem-redis",
+    "url": "https://github.com/ClaudiuCeia/p-memoize-redis",
     "type": "git"
   },
-  "bugs": "https://github.com/ClaudiuCeia/mem-redis/issues",
+  "bugs": "https://github.com/ClaudiuCeia/p-memoize-redis/issues",
   "engines": {
     "node": ">=8"
   },
@@ -19,7 +19,7 @@
     "dist/*"
   ],
   "keywords": [
-    "mem-redis",
+    "p-memoize-redis",
     "memoize",
     "redis-cache"
   ],

@@ -27,7 +27,6 @@ export class RedisCache {
         console.log("Error " + err);
     });
     this.client = redisClient;
-    // console.log(this);
 	}
 
 	has = async (key: string) => {
